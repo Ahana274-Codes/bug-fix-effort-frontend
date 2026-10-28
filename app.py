@@ -92,9 +92,6 @@ if submitted:
                 timeout=120
             )
 
-
-            )
-
         if response.ok:
             result = response.json()
             st.subheader("Prediction Results")
