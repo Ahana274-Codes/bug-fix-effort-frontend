@@ -87,9 +87,11 @@ if submitted:
     try:
         with st.spinner("Analyzing bug report..."):
             response = requests.post(
-                "https://bug-fix-effort-predictor-api.onrender.com",
+                "https://bug-fix-effort-predictor-api.onrender.com/predict",
                 json=payload,
-                timeout=30
+                timeout=120
+            )
+
             )
 
         if response.ok:
